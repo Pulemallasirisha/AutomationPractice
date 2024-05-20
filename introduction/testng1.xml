@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemoSuite">
+<parameter name="browserName" value="chrome"/>
+<parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+<parameter name="username" value="Admin"/>
+<parameter name="password" value="admin123"/>
+<parameter name="sleepTime" value="3000"/>
+  <test name="OrangeHRMLogin" enabled="false">
+  <parameter name="browserName" value="Chrome"/>
+    <classes>
+			<class name="testng1.practiceOrangeHRM">
+				<methods>
+					<include name="LaunchApp" />
+					<include name="EnterLoginDetails" />
+					
+				</methods>
+			</class>
+		</classes>
+  </test> 
+  
+  
+  <test name="OrangeHRMMyInfo">
+    <classes>
+			<class name="testng1.practiceOrangeHRM">
+				<methods>
+					<include name="LaunchApp" />
+					<include name="EnterLoginDetails" />
+					<include name="NavigateToMyInfo" />
+					<include name="VerifyMyInfo" />
+				</methods>
+			</class>
+		</classes>
+  </test>
+</suite> 
